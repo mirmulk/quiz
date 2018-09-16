@@ -14,5 +14,8 @@ export class HomeComponent implements OnInit {
 
   onClickMe(val: any) {
     console.log(val);
+    if(val === 2) {
+      console.log('correct!');
+    }
   }
 }

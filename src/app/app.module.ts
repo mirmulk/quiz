@@ -7,18 +7,21 @@ import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
 import {PictureService} from './picture.service';
 import {HttpClientModule} from '@angular/common/http';
+import { AnswerComponent } from './answer/answer.component';
 
 
 const appRoutes: Routes = [
   /*{ path: '', redirectTo: 'home', pathMatch: 'full'},*/
   { path: 'home', component: HomeComponent },
+  { path: 'answer', component: AnswerComponent },
   ];
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    HeaderComponent
+    HeaderComponent,
+    AnswerComponent
   ],
   imports: [
     BrowserModule,

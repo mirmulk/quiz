@@ -5,13 +5,12 @@ import {map} from 'rxjs/internal/operators';
 
 @Injectable()
 export class PictureService {
-  url = 'http://localhost:3000';
+  url = 'http://localhost:3000/pictures';
 
   constructor(private http: HttpClient) { }
 
-  getAll(): Observable<any> {
-    return this.http.get(this.url)
-      .pipe(map(response => response));
+  public getAll(): Observable<any> {
+    return this.http.get(this.url);
 
   }
 }

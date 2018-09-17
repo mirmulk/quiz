@@ -8,7 +8,7 @@ import {ActivatedRoute, Router} from '@angular/router';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  private contacts;
+  public pictures: Array<object> = [];
 
   constructor(private _pictureService: PictureService,
               private route: ActivatedRoute,
@@ -16,7 +16,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this._pictureService.getAll().subscribe((data:  Array<object>) => {
-      this.contacts  =  data;
+      this.pictures  =  data;
       console.log(data);
     });
   }
@@ -25,7 +25,7 @@ export class HomeComponent implements OnInit {
     console.log(val);
     if (val === 2) {
       console.log('correct!');
-      this.router.navigate(['']);
+      this.router.navigate(['answer']);
     }
   }
 }
